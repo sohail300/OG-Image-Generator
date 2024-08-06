@@ -27,11 +27,11 @@ export const photoSchema = z.object({
 export const postSchema = z.object({
   title: z
     .string()
-    .min(0, "The title should have 1-100 characters.")
+    .min(1, "The title should have 1-100 characters.")
     .max(100, "The title should have 1-100 characters."),
   description: z
     .string()
-    .min(0, "The title should have 1-10000 characters.")
+    .min(1, "The title should have 1-10000 characters.")
     .max(10000, "The title should have 1-10000 characters."),
   photo: z
     .object({
