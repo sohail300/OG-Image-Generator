@@ -27,7 +27,7 @@ cloudinary.config({
   api_secret: process.env.API_SECRET,
 });
 
-app.post("/test", upload.single("photo"), router);
+app.use("/test", upload.single("photo"), router);
 
 app.listen(3000, () => {
   console.log("Server listenting on port 3000");
